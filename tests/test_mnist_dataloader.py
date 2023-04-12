@@ -4,7 +4,7 @@ from torch.utils.data import default_collate
 import os
 
 def test_mnist_dataloader():
-    img_dir = 'data/mnist'
+    img_dir = 'tests/data/mnist'
     annotations_file = os.path.join(img_dir, "train.csv")
     dataset = MNISTDataset(img_dir, annotations_file)
     (x_train, y_train) = default_collate(dataset)

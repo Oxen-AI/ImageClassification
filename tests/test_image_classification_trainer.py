@@ -8,8 +8,8 @@ import os
 import shutil
 
 def test_image_classification_trainer():
-    data_dir = 'data/mnist'
-    img_dir = 'data/mnist'
+    data_dir = 'tests/data/mnist'
+    img_dir = 'tests/data/mnist'
     annotations_file = os.path.join(img_dir, "train.csv")
     dataset = MNISTDataset(img_dir, annotations_file)
     dataloader = DataLoader(dataset, batch_size=4, shuffle=True, num_workers=0)
